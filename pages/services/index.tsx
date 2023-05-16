@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ServicesBanner, Footer } from '@/components'
 import { AboutBg } from '@/public'
-import { Divider } from 'antd'
 
 const services = () => {
   const router = useRouter()

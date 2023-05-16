@@ -29,7 +29,7 @@ const NavItem: FC<Props> = ({ index, item }) => {
                     title={item.subItems &&
                         item.subItems.map((subItem, index) => (
                             <div key={index}
-                                className='text-white text-sm font-semibold hover:text-[#111111] cursor-pointer flex items-center gap-1'
+                                className='text-white text-sm font-semibold hover:text-gray-400 cursor-pointer flex items-center gap-1 transition duration-150 ease-in-out'
                                 onClick={() => router.push(subItem.path)}
                             >
                                 {subItem.name}
