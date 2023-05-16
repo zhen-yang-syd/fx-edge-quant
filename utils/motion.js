@@ -24,8 +24,8 @@ export const textVariant = (delay) => {
   ) => {
 	return {
 	  hidden: {
-		x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-		y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+		x: direction === "left" ? 1000 : direction === "right" ? -1000 : 0,
+		y: direction === "up" ? 500 : direction === "down" ? -500 : 0,
 		opacity: 0,
 	  },
 	  show: {

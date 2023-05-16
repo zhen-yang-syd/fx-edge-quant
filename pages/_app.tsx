@@ -3,7 +3,13 @@ import type { AppProps } from 'next/app'
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Layout } from "antd";
-import { Loading } from '../components'
+import { Loading, TopNavbar } from '../components'
+import { Montserrat } from 'next/font/google'
+const montserrat = Montserrat({
+	weight: ["400", '500', '600', '700', '800', '900'],
+	style: ['normal', 'italic'],
+	subsets: ['latin'],
+})
 
 export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -32,8 +38,9 @@ export default function App({ Component, pageProps }: AppProps) {
 		};
 	}, [router]);
 	return (
-		<Layout className='bg-gradient-to-r from-indigo-500 to-blue-300 bg-opacity-50 backdrop-filter backdrop-blur-lg w-full h-[100vh] lg:p-20 p-0'>
-			<Content className="bg-black bg-opacity-[0.2] backdrop-filter backdrop-blur-lg lg:rounded-xl shadow-2xl rounded-none overflow-scroll">
+		<Layout className={`w-full relative ${montserrat.className}`}>
+			<TopNavbar />
+			<Content>
 				{loading && <Loading />}
 				<Component {...pageProps} />
 			</Content>
