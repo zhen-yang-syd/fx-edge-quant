@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<Layout className={`w-full relative ${montserrat.className}`}>
 			<TopNavbar />
 			<Content>
-				{loading && <Loading />}
+				{/* {loading && <Loading />} */}
 				<Component {...pageProps} />
 			</Content>
 		</Layout>

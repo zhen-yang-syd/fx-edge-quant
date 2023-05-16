@@ -136,7 +136,7 @@ const MdaServices = () => {
           <div className='paragraph-container text-black drop-shadow-lg justify-end items-center'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] capitalize'>Benefits of an MDA</h3>
             <div className='flex flex-col gap-4 text-gray-500'>
-              MDAs can be useful for investors who don't have the time or expertise to manage their own investments.
+              MDAs can be useful for investors who don&apos;t have the time or expertise to manage their own investments.
             </div>
           </div>
         </div>
@@ -173,4 +173,4 @@ const MdaServices = () => {
   )
 }
 
-export default BlockWrapper(MdaServices, '')
+export default BlockWrapper(MdaServices, 'mda-services')

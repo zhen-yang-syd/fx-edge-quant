@@ -8,6 +8,7 @@ import HomeBanner from "./Home/HomeBanner";
 import AboutBanner from "./Home/AboutBanner";
 import ServicesBanner from './Home/ServicesBanner'
 import Footer from './Footer'
+import Map from './Map'
 
 export {
   // Loading
@@ -22,4 +23,5 @@ export {
   ServicesBanner,
   Footer,
   NavItem,
+  Map
 };

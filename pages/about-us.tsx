@@ -34,7 +34,7 @@ const AboutUs = () => {
               </p>
               <Divider className='bg-white m-0 my-4' />
               <p className='text-normal font-light'>
-                We work with you the client to ensure that all are working towards the same financial goals. Quality, accuracy and dependability are 'must haves' in the development of successful financial plans.
+                We work with you the client to ensure that all are working towards the same financial goals. Quality, accuracy and dependability are &apos;must haves&apos; in the development of successful financial plans.
               </p>
               <Divider className='bg-white m-0 my-4' />
               <p className='text-normal font-light'>

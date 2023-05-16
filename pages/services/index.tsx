@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { ServicesBanner, Footer } from '@/components'
 import { AboutBg } from '@/public'
+import { BlockWrapper } from '@/components/Hoc'
 
 const services = () => {
   const router = useRouter()
@@ -31,7 +32,7 @@ const services = () => {
               <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-4 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/financial-advice')}>
                 <div className='text-center capitalize text-lg font-semibold'>Financial Advice</div>
                 <div className='flex flex-col text-center text-sm'>
-                  <span>General financial advice doesn't take into account your personal situation or goals, or how it might affect you personally.</span>
+                  <span>General financial advice doesn&apos;t take into account your personal situation or goals, or how it might affect you personally.</span>
                   <span>Personal financial advice helps to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance and super and retirement planning.</span>
                 </div>
               </div>
@@ -56,4 +57,4 @@ const services = () => {
   )
 }
 
-export default services
+export default BlockWrapper(services,'services')

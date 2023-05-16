@@ -1,6 +1,7 @@
 import { FC, useState, useEffect } from 'react'
 import { DownOutlined } from '@ant-design/icons'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { Tooltip } from 'antd'
 type Props = {
     index: number,
@@ -26,11 +27,11 @@ const NavItem: FC<Props> = ({ index, item }) => {
                 <Tooltip
                     arrow={false}
                     color='gray'
-                    title={item.subItems &&
-                        item.subItems.map((subItem, index) => (
+                    title={
+                        item.subItems?.map((subItem:any, index:number) => (
                             <div key={index}
                                 className='text-white text-sm font-semibold hover:text-gray-400 cursor-pointer flex items-center gap-1 transition duration-150 ease-in-out'
-                                onClick={() => router.push(subItem.path)}
+                                onClick={()=>router.push(subItem.path)}
                             >
                                 {subItem.name}
                             </div>
