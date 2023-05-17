@@ -9,12 +9,10 @@ import { Divider, message } from 'antd'
 import { FormOutlined, EnvironmentOutlined, MailOutlined } from '@ant-design/icons'
 import dynamic from 'next/dynamic'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
+const VerifyComponent = dynamic(() => import('@/components/VerifyComponent'), { ssr: false })
 import { Input, Form, Button } from 'antd'
-import {
-  GoogleReCaptchaProvider,
-  GoogleReCaptcha
-} from 'react-google-recaptcha-v3';
-import VerifyComponent from '@/components/VerifyComponent'
+import axios from 'axios'
+import { BASE_URL } from '@/utils'
 
 const ContactUs = () => {
   const copyToClipboard = (elementId: string) => {
@@ -32,18 +30,26 @@ const ContactUs = () => {
   const [title, setTitle] = useState<string>()
   const [email, setEmail] = useState<string>()
   const [content, setContent] = useState<string>()
+  const [phone, setPhone] = useState<string>()
+
+  const [passVerification, setPassVerification] = useState<boolean>(false)
 
   const [form] = Form.useForm();
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     console.log(values)
+    try {
+      const { data } = await axios.post(`${BASE_URL}/api/send-email`, values)
+      console.log(data)
+    }
+    catch (err) {
+      console.log(err)
+    }
     message.success('Message sent successfully')
+
   }
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
     message.error('Please fill all the fields')
-  }
-  const handleVerify = (token: string) => {
-    console.log(token)
   }
   return (
     <>
@@ -107,6 +113,18 @@ const ContactUs = () => {
                         />
                       </Form.Item>
                       <Form.Item
+                        name="phone"
+                      >
+                        <Input
+                          placeholder="Phone"
+                          size='large'
+                          onChange={
+                            (e: React.ChangeEvent<HTMLInputElement>) => { setPhone(e.target.value) }
+                          }
+                          value={phone}
+                        />
+                      </Form.Item>
+                      <Form.Item
                         name="email"
                         rules={[
                           { required: true, message: 'Please input your title!' },
@@ -150,9 +168,9 @@ const ContactUs = () => {
                           value={content}
                         />
                       </Form.Item>
-                      {/* <GoogleReCaptchaProvider reCaptchaKey="6LdbUxYmAAAAALYH2KK7QiX4Skn0dtaRTF7c0GMZ">
-                        <GoogleReCaptcha onVerify={handleVerify} />
-                      </GoogleReCaptchaProvider> */}
+                      <div className='mx-auto'>
+                        <VerifyComponent setPassVerification={setPassVerification} />
+                      </div>
                       <Form.Item className='w-full flex justify-between flex-col items-center'>
                         <Button
                           htmlType="submit"
@@ -161,19 +179,13 @@ const ContactUs = () => {
                           border-white border-[1px]
                           bg-blue-400 text-white hover:bg-white px-10 py-5
                           "
+                          disabled={!passVerification}
                         >
                           SEND
                         </Button>
                       </Form.Item>
                     </Form>
                   </div>
-                  
-                  <GoogleReCaptchaProvider reCaptchaKey="YOUR_RECAPTCHA_SITE_KEY">
-      <div>
-        <h1>Send a Message</h1>
-        <VerifyComponent />
-      </div>
-    </GoogleReCaptchaProvider>
                 </div>
               </div>
             </div>
