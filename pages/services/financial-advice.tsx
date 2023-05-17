@@ -17,7 +17,6 @@ const FinancialAdvice = () => {
         <link rel="icon" href="/icon.svg" />
       </Head>
       <main className='w-full relative'>
-
         <div className='w-full h-[80vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
           <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-center items-center text-white text-center'>
             <motion.div
@@ -40,7 +39,6 @@ const FinancialAdvice = () => {
             </div>
           </div>
         </div>
-        {/*  */}
         <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>General advice</h3>
@@ -65,7 +63,6 @@ const FinancialAdvice = () => {
             </div>
           </div>
         </div>
-        {/*  */}
         <div className='w-full relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='w-full h-full absolute top-0 left-0 bg-black bg-opacity-40'></div>
           <div className='paragraph-container text-white drop-shadow-lg'>
@@ -75,15 +72,15 @@ const FinancialAdvice = () => {
               <Divider className='m-0 bg-white' />
               <p className='text-lg text-white'>Personal advice can include:</p>
               <div className='w-full flex flex-row justify-between gap-4'>
-                <div className='shadow-lg pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-gray-300'>
+                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
                   <h4>Simple, single-issue advice </h4>
                   <p>Help with one financial issue. For example, how much to contribute to your super, or what to do if you inherit shares.</p>
                 </div>
-                <div className='shadow-lg pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-gray-300'>
+                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
                   <h4>Comprehensive financial advice</h4>
                   <p>Help to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance, superannuation and retirement planning.</p>
                 </div>
-                <div className='shadow-lg pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-gray-300'>
+                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
                   <h4>Ongoing advice </h4>
                   <p>Regular monitoring and review of your financial plan and personal circumstances.</p>
                 </div>
@@ -92,8 +89,7 @@ const FinancialAdvice = () => {
             </div>
           </div>
         </div>
-        {/*  */}
-        <div className='w-full bg-gray-300'>
+        {/* <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-gray-500 drop-shadow-lg'>
             <h3 className='text-black font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>When general advice might be appropriate</h3>
             <div className='w-full flex flex-row flex-wrap justify-center gap-10'>
@@ -124,8 +120,7 @@ const FinancialAdvice = () => {
               </div>
             </div>
           </div>
-        </div>
-        {/*  */}
+        </div> */}
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>When personal advice might be appropriate</h3>
@@ -150,7 +145,6 @@ const FinancialAdvice = () => {
             </div>
           </div>
         </div>
-        {/*  */}
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>

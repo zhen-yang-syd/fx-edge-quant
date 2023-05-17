@@ -7,14 +7,14 @@ const containerStyle = {
 };
 
 const center = {
-    lat: -3.745,
-    lng: -38.523
+    lat: -33.87361540180599, 
+    lng: 151.20940954939806,
 };
 
-function MyComponent() {
+const Map = () => {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: "YOUR_API_KEY"
+        googleMapsApiKey:"AIzaSyDUhc3SEYAnAL1Bd8oraCd-vNd3UzvS0oM"
     })
 
     const [map, setMap] = React.useState(null)
@@ -22,8 +22,6 @@ function MyComponent() {
     const onLoad = React.useCallback(function callback(map: any) {
         // This is just an example of getting and using the map instance!!! don't just blindly copy!
         const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
-
         setMap(map)
     }, [])
 
@@ -35,9 +33,10 @@ function MyComponent() {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
             onLoad={onLoad}
             onUnmount={onUnmount}
+            clickableIcons={true}
+            zoom={20}
         >
             { /* Child components, such as markers, info windows, etc. */}
             <></>
@@ -45,4 +44,4 @@ function MyComponent() {
     ) : <></>
 }
 
-export default React.memo(MyComponent)
+export default Map
