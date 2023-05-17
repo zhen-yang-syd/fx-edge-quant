@@ -35,7 +35,7 @@ const FinancialAdvice = () => {
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Financial advice</h3>
             <div className='flex flex-col gap-4 text-gray-500 text-base'>
-              <p>General financial advice doesn't take into account your personal situation or goals, or how it might affect you personally.</p>
+              <p>General financial advice doesn&apos;t take into account your personal situation or goals, or how it might affect you personally.</p>
               <p>Personal financial advice helps to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance and super and retirement planning.</p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const FinancialAdvice = () => {
                 <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
                   <li>want to compare or confirm your understanding of different financial products. For example, the difference between a managed fund and an ETF</li>
                   <li>are researching and learning about different financial topics</li>
-                  <li>don't want to spend money on tailored advice</li>
+                  <li>don&apos;t want to spend money on tailored advice</li>
                 </ul>
               </div>
               <Divider type='vertical' className='bg-white h-[200px] lg:block hidden' />
@@ -134,7 +134,7 @@ const FinancialAdvice = () => {
               <div className='max-w-[300px]'>
                 <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
                   <li>Your situation is complex and you need help to work it all out</li>
-                  <li>You're going through a significant life event. For example, buying a house, getting married, transitioning to retirement, redundancy, death of a spouse, or illness.</li>
+                  <li>You&apos;re going through a significant life event. For example, buying a house, getting married, transitioning to retirement, redundancy, death of a spouse, or illness.</li>
                   <li>You inherited a large sum of money.</li>
                   <li>You want to outsource your financial affairs.</li>
                 </ul>
@@ -143,8 +143,8 @@ const FinancialAdvice = () => {
               <div className='max-w-[300px]'>
                 <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
                   <li>You need specific advice on a topic area and have specific requirements. For example, you want income protection insurance but have health issues.</li>
-                  <li>You want to ensure you're on track to meet your financial goals.</li>
-                  <li>You need help managing someone else's money. For example, you’re appointed Power of Attorney for someone, or you’re an executor for a deceased estate.</li>
+                  <li>You want to ensure you&apos;re on track to meet your financial goals.</li>
+                  <li>You need help managing someone else&apos;s money. For example, you’re appointed Power of Attorney for someone, or you’re an executor for a deceased estate.</li>
                 </ul>
               </div>
             </div>

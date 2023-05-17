@@ -5,8 +5,8 @@ import { ServicesBanner, Footer } from '@/components'
 import { AboutBg } from '@/public'
 import { BlockWrapper } from '@/components/Hoc'
 
-const services = () => {
-  const router = useRouter()
+const Services = () => {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -57,4 +57,4 @@ const services = () => {
   )
 }
 
-export default BlockWrapper(services,'services')
+export default BlockWrapper(Services,'services')
