@@ -52,8 +52,8 @@ const Footer = () => {
             </div>
             <div className='w-full bg-[#223342] text-white cursor-default'>
                 <div className='footer-container'>
-                    <div className='w-full flex flex-col gap-2'>
-                        <div>Copyright © 2023 Edge Ark Pty Ltd. AFSL CAR No: 001303224, CAN: 664 994 503. All rights reserved.</div>
+                    <div className='w-full flex flex-col gap-2 text-center px-4 sm:px-0'>
+                        <div>Copyright © 2023 Edge Ark Pty Ltd. AFSL CAR No: 001303224, ACN: 664 994 503. All rights reserved.</div>
                         <Link href='/disclaimer' className='capitlize'>Privacy Policy | Disclaimer </Link>
                     </div>
                 </div>

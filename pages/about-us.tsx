@@ -24,7 +24,7 @@ const AboutUs = () => {
         <div className='w-full bg-[#373737]'>
           <div className='paragraph-container text-white'>
             <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>edge quant group</h3>
-            <div className='' id="about-introduction">
+            <div className='px-4' id="about-introduction">
               <p className='text-normal font-light'>
                 EDGE via its alliances offers you a broad range of trading opportunities whether you’re an experienced trader, or just getting started. EDGE is 100 percent Australian owned and managed by the principal owners which means we are committed to offering you the best service and servicing your trading needs. Our mission is to provide investment solutions for serious investors who value personal service.
               </p>
@@ -46,7 +46,7 @@ const AboutUs = () => {
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize text-3xl'>get your free initial consultation</span>
+              <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
               <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
             </div>
           </div>

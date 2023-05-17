@@ -46,7 +46,7 @@ const Services = () => {
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize text-3xl'>get your free initial consultation</span>
+            <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
               <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
             </div>
           </div>

@@ -33,7 +33,7 @@ const FinancialAdvice = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Financial advice</h3>
-            <div className='flex flex-col gap-4 text-gray-500 text-base'>
+            <div className='flex flex-col gap-4 text-gray-500 text-base px-4'>
               <p>General financial advice doesn&apos;t take into account your personal situation or goals, or how it might affect you personally.</p>
               <p>Personal financial advice helps to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance and super and retirement planning.</p>
             </div>
@@ -42,7 +42,7 @@ const FinancialAdvice = () => {
         <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>General advice</h3>
-            <div className='flex flex-col gap-4 text-gray-500'>
+            <div className='flex flex-col gap-4 text-gray-500 px-4'>
               <p className='text-gray-500 text-lg'>General advice is a recommendation or opinion about a financial product that is not tailored to your personal circumstances. This advice won’t consider your personal circumstances, such as your:</p>
               <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
                 <li>income</li>
@@ -67,11 +67,11 @@ const FinancialAdvice = () => {
           <div className='w-full h-full absolute top-0 left-0 bg-black bg-opacity-40'></div>
           <div className='paragraph-container text-white drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Personal advice</h3>
-            <div className='flex flex-col gap-4 text-gray-500 capitalize'>
+            <div className='flex flex-col gap-4 text-gray-500 capitalize px-4'>
               <p className='capitalize text-lg text-white'>Personal advice is a recommendation or opinion tailored to your personal circumstances. It is more specific than general advice and takes into account your financial situation and goals. Personal advice providers must act in your best interest.</p>
               <Divider className='m-0 bg-white' />
               <p className='text-lg text-white'>Personal advice can include:</p>
-              <div className='w-full flex flex-row justify-between gap-4'>
+              <div className='w-full flex flex-row flex-wrap justify-between gap-4'>
                 <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
                   <h4>Simple, single-issue advice </h4>
                   <p>Help with one financial issue. For example, how much to contribute to your super, or what to do if you inherit shares.</p>
@@ -123,7 +123,7 @@ const FinancialAdvice = () => {
         </div> */}
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
-            <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>When personal advice might be appropriate</h3>
+            <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize sm:leading-none leading-[55px]'>When personal advice might be appropriate</h3>
             <div className='flex flex-row text-gray-500 flex-wrap justify-center gap-20'>
               {/* right section */}
               <div className='max-w-[300px]'>
@@ -148,7 +148,7 @@ const FinancialAdvice = () => {
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize text-3xl'>get your free initial consultation</span>
+            <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
               <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
             </div>
           </div>

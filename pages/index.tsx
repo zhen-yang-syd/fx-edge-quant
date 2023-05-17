@@ -27,14 +27,14 @@ export default function Home() {
 						<span className='text-gray-300 font-semibold text-2xl'>EDGE ARK PTY LTD</span>
 						<span className='underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px]'>Trading and Financial Services</span>
 					</h2>
-					<p className='text-lg font-light grid grid-flow-col col-span-3 gap-10'>
-						<span className='drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
+					<p className='text-lg font-light flex flex-row flex-wrap justify-center lg:gap-20 sm:gap-10 gap-0'>
+						<span className='w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
 							<FundTwoTone className='text-5xl' />
 							EDGE is an exciting boutique Financial Services Securities firm with strategic alliances across all facets of the financial markets providing clients with a unique offering to suit their own requirements, whether online traders, wealth creators or one off trades.</span>
-						<span className='drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
+						<span className='w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
 							<DollarTwoTone className='text-5xl' twoToneColor="#eb2f96" />
 							EDGE is complimented with a team of young and old to provide the best personal customer service to all clients and their financial needs. With a long and distinguished presence in the global Market, we bring a depth of knowledge and expertise across a variety of financial areas.</span>
-						<span className='drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
+						<span className='w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 text-sm leading-[23px]'>
 							<CrownTwoTone className='text-5xl' twoToneColor="#52c41a" />
 							EDGE’s strengths are working with our clients to deliver the best possible service and create financial stability.</span>
 					</p>
@@ -42,14 +42,14 @@ export default function Home() {
 				<div className='w-full bg-[#373737]'>
 					<div className='paragraph-container text-white'>
 						<h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center'>OUR FOCUS</h3>
-						<div className='' id="mission">
+						<div className='px-4' id="mission">
 							<h4 className='font-normal text-xl'>MISSION</h4>
 							<Divider className='bg-white m-0 my-4' />
 							<p className='text-normal font-light'>
 								We are committed to the highest standards of professionalism and integrity. This is demonstrated through our ongoing professional development of our team by understanding our clients, their businesses and their interests.
 							</p>
 						</div>
-						<div className='' id='vision'>
+						<div className='px-4' id='vision'>
 							<h4 className='font-normal text-xl'>VISION</h4>
 							<Divider className='bg-white m-0 my-4' />
 							<p className='text-normal font-light'>
@@ -62,7 +62,7 @@ export default function Home() {
 					<div className='w-full h-full bg-black bg-opacity-30 absolute top-0 left-0 z-30'></div>
 					<div className='paragraph-container text-white'>
 						<h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center z-50'>VALUE</h3>
-						<div className='w-[1000px] m-auto z-50'>
+						<div className='w-[50%] mx-auto z-50'>
 							<Collapse defaultActiveKey={['1']} ghost accordion className='text-white w-full z-50'>
 								<Panel header="Professional" key="1">
 									<Divider className='bg-white m-0 mb-5' />

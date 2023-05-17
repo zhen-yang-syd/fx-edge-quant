@@ -54,11 +54,11 @@ const ContactUs = () => {
   return (
     <>
       <Head>
-				<title>EDGE QUANT FUND MANAGEMENT</title>
-				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/edge-icon.svg" />
-			</Head>
+        <title>EDGE QUANT FUND MANAGEMENT</title>
+        <meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/edge-icon.svg" />
+      </Head>
       <main className='w-full relative'>
         <div className='w-full h-[50vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
           <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-center items-center text-white text-center'>
@@ -74,7 +74,7 @@ const ContactUs = () => {
         </div>
         <div className='w-full bg-white'>
           <div className='paragraph-container drop-shadow-lg'>
-            <div className='w-full flex flex-row flex-wrap justify-center gap-10'>
+            <div className='w-full flex flex-row flex-wrap justify-center gap-10 px-4'>
               {/* map */}
               <Map />
               <div className='w-[600px] flex flex-col gap-5'>
@@ -194,7 +194,7 @@ const ContactUs = () => {
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize text-3xl'>get your free initial consultation</span>
+              <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
               <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
             </div>
           </div>

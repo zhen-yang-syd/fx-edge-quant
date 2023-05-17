@@ -110,16 +110,16 @@ const MdaServices = () => {
         </div>
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
-            <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>MDA (Managed discretionary account) Service</h3>
-            <div className='flex flex-col gap-4 text-gray-500'>
+            <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize sm:leading-none leading-[55px]'>MDA (Managed discretionary account) Service</h3>
+            <div className='flex flex-col gap-4 text-gray-500 px-4'>
               <p>A personal investment account where you own investment assets, such as company shares or units in a managed fund. You give someone else (the MDA provider) the authority to buy and sell investments on your behalf. Financial advisers often use MDAs to manage portfolios for their clients.</p>
             </div>
           </div>
         </div>
         <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-black drop-shadow-lg'>
-            <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize'>How an MDA works</h3>
-            <div className='flex flex-col gap-4 text-gray-500'>
+            <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize px-10'>How an MDA works</h3>
+            <div className='flex flex-col gap-4 text-gray-500 px-10'>
               <ul className='list-disc flex flex-col gap-2'>
                 <li>You sign an agreement (MDA contract) with the MDA provider. This gives the provider the discretion to buy or sell investments without having to check with you.</li>
                 <li>You and the provider agree on an investment program, and they must make investment decisions in line with this.</li>
@@ -135,7 +135,7 @@ const MdaServices = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg justify-end items-center'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] capitalize'>Benefits of an MDA</h3>
-            <div className='flex flex-col gap-4 text-gray-500'>
+            <div className='flex flex-col gap-4 text-gray-500 px-4'>
               MDAs can be useful for investors who don&apos;t have the time or expertise to manage their own investments.
             </div>
           </div>
@@ -143,7 +143,7 @@ const MdaServices = () => {
         <section className='min-w-[100vw] min-h-[100vh] lg:px-0 px-5 bg-gray-300'>
           <div className="py-10 w-full">
             <motion.div variants={textVariant()}>
-              <p className={`text-center text-white font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize`}>
+              <p className={`text-center text-white font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize sm:leading-none leading-[55px]`}>
                 Benefits of an MDA include:
               </p>
             </motion.div>
@@ -162,7 +162,7 @@ const MdaServices = () => {
         <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='footer-container'>
             <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize text-3xl'>get your free initial consultation</span>
+            <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
               <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
             </div>
           </div>

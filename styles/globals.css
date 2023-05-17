@@ -43,8 +43,9 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 4rem;
+    flex-wrap: wrap;
     @media screen and (max-width: 768px) {
-        
+        justify-content:space-evenly;
     }
 }
 .ant-collapse-header-text {
@@ -62,6 +63,9 @@
     box-shadow: 0 0 10px white !important;
     background-color: rgba(8, 8, 8, 0.478) !important;
     padding: 20px 10px;
+    @media screen and (max-width: 768px) {
+        padding: 10px 0px 20px;
+    }
 }
 .ant-collapse-header {
     padding-bottom: 0 !important;
