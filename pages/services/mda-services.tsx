@@ -90,11 +90,11 @@ const MdaServices = () => {
   return (
     <>
       <Head>
-        <title>FX-QUANT</title>
-        <meta name="description" content="EDGE QUANT FINICIAL TRADING" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icon.svg" />
-      </Head>
+				<title>EDGE QUANT FUND MANAGEMENT</title>
+				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/edge-icon.svg" />
+			</Head>
       <main className='w-full relative'>
         <div className='w-full h-[80vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
           <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-center items-center text-white text-center'>
