@@ -46,6 +46,7 @@
     flex-wrap: wrap;
     @media screen and (max-width: 768px) {
         justify-content:space-evenly;
+        padding: 0 2rem;
     }
 }
 .ant-collapse-header-text {
