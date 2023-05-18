@@ -38,7 +38,7 @@ const ContactUs = () => {
   const onFinish = async (values: any) => {
     console.log(values)
     try {
-      const { data } = await axios.post(`${BASE_URL}/api/send-email`, values)
+      const { data } = await axios.post(`/api/send-email`, values)
       console.log(data)
     }
     catch (err) {
