@@ -37,7 +37,7 @@ export default function Home() {
 				<title>EDGE QUANT FUND MANAGEMENT</title>
 				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/edge-icon.svg" />
+				<link rel="icon" href="/edge-icon.png" />
 			</Head>
 			<main className='w-full relative'>
 				<div className='w-full h-[100vh] relative' style={{ backgroundImage: `url(${HomeBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
