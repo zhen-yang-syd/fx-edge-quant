@@ -20,7 +20,7 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* nav bar */}
-                    <div className='flex flex-col gap-5 items-center'>
+                    <div className='flex flex-col gap-5 items-left'>
                         {
                             navItem.map((item, index) => (
                                 <div key={index}

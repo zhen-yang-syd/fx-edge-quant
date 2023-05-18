@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { ServicesBanner, Footer } from '@/components'
 import { AboutBg } from '@/public'
 import { BlockWrapper } from '@/components/Hoc'
+import { paragrahStyle } from '@/styles'
 
 const Services = () => {
   const router = useRouter();
@@ -25,20 +26,20 @@ const Services = () => {
           <div className='paragraph-container text-white'>
             <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>edge quant services</h3>
             <div className='flex flex-row flex-wrap justify-center gap-20'>
-              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-4 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/mda-services')}>
+              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/mda-services')}>
                 <div className='text-center capitalize text-lg font-semibold'>M.D.A Services</div>
-                <div className='flex flex-col text-center text-sm'>Financial advisers often use MDAs to manage portfolios for their clients.</div>
+                <div className={`flex flex-col ${paragrahStyle}`}>Financial advisers often use MDAs to manage portfolios for their clients.</div>
               </div>
-              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-4 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/financial-advice')}>
+              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/financial-advice')}>
                 <div className='text-center capitalize text-lg font-semibold'>Financial Advice</div>
-                <div className='flex flex-col text-center text-sm'>
+                <div className={`flex flex-col ${paragrahStyle}`}>
                   <span>General financial advice doesn&apos;t take into account your personal situation or goals, or how it might affect you personally.</span>
                   <span>Personal financial advice helps to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance and super and retirement planning.</span>
                 </div>
               </div>
-              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-4 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/sustainable-investment')}>
+              <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/sustainable-investment')}>
                 <div className='text-center capitalize text-lg font-semibold'>sustainable investment</div>
-                <div className='flex flex-col text-center text-sm'>Sustainable Investing is the practice of using ESG — environmental, social and governance — objectives, themes, and related considerations as a key driver for selecting investments. Combined with traditional financial analysis, this lens is an inclusive category that contains numerous approaches for pursuing better risk-adjusted returns.</div>
+                <div className={`flex flex-col ${paragrahStyle}`}>Sustainable Investing is the practice of using ESG — environmental, social and governance — objectives, themes, and related considerations as a key driver for selecting investments. Combined with traditional financial analysis, this lens is an inclusive category that contains numerous approaches for pursuing better risk-adjusted returns.</div>
               </div>
             </div>
           </div>

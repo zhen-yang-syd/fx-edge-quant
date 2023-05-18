@@ -11,6 +11,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { paragrahStyle } from '@/styles'
 
 const BenifitCard = ({ benifit }: { benifit: any }) => {
   return (
@@ -40,7 +41,7 @@ const BenifitCard = ({ benifit }: { benifit: any }) => {
           {benifit.points.map((point: any, index: number) => (
             <li
               key={`benifit-point-${index}`}
-              className='text-white-100 text-[14px] pl-1 tracking-wider'
+              className={`text-white-100 text-[14px] pl-1 tracking-wider ${paragrahStyle}`}
             >
               {point}
             </li>
@@ -59,7 +60,7 @@ const MdaServices = () => {
       icon: Logo.src,
       iconBg: "gray",
       points: [
-        " the MDA provider makes day-to-day investment decisions on your behalf. This means fewer decisions for you to make and less paperwork to review."
+        "The MDA provider makes day-to-day investment decisions on your behalf. This means fewer decisions for you to make and less paperwork to review."
       ],
     },
     {
@@ -67,7 +68,7 @@ const MdaServices = () => {
       icon: Logo.src,
       iconBg: "gray",
       points: [
-        " MDA platforms let you view all the assets you own in the account. You can see fees and charges, and how your investments are performing. Look for an MDA with this feature."
+        "MDA platforms let you view all the assets you own in the account. You can see fees and charges, and how your investments are performing. Look for an MDA with this feature."
       ],
     },
     {
@@ -75,7 +76,7 @@ const MdaServices = () => {
       icon: Logo.src,
       iconBg: "gray",
       points: [
-        " the MDA provider can buy or sell assets to respond quickly to market changes."
+        "The MDA provider can buy or sell assets to respond quickly to market changes."
       ],
     },
     {
@@ -83,7 +84,7 @@ const MdaServices = () => {
       icon: Logo.src,
       iconBg: "gray",
       points: [
-        " some MDA providers use professional investment managers to trade on your behalf."
+        "Some MDA providers use professional investment managers to trade on your behalf."
       ],
     },
   ];
@@ -111,7 +112,7 @@ const MdaServices = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize sm:leading-none leading-[55px]'>MDA (Managed discretionary account) Service</h3>
-            <div className='flex flex-col gap-4 text-gray-500 px-4'>
+            <div className={`${paragrahStyle} flex flex-col gap-4 text-gray-500 px-4`}>
               <p>A personal investment account where you own investment assets, such as company shares or units in a managed fund. You give someone else (the MDA provider) the authority to buy and sell investments on your behalf. Financial advisers often use MDAs to manage portfolios for their clients.</p>
             </div>
           </div>
@@ -120,7 +121,7 @@ const MdaServices = () => {
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize px-10'>How an MDA works</h3>
             <div className='flex flex-col gap-4 text-gray-500 px-10'>
-              <ul className='list-disc flex flex-col gap-2'>
+              <ul className={`${paragrahStyle} list-disc flex flex-col gap-2`}>
                 <li>You sign an agreement (MDA contract) with the MDA provider. This gives the provider the discretion to buy or sell investments without having to check with you.</li>
                 <li>You and the provider agree on an investment program, and they must make investment decisions in line with this.</li>
                 <li>The investment program sets out what the MDA provider can invest in, and what trading strategies to use. This reflects the investment strategy in the Statement of Advice</li>
@@ -135,7 +136,7 @@ const MdaServices = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg justify-end items-center'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] capitalize'>Benefits of an MDA</h3>
-            <div className='flex flex-col gap-4 text-gray-500 px-4'>
+            <div className={`${paragrahStyle} flex flex-col gap-4 text-gray-500 px-4`}>
               MDAs can be useful for investors who don&apos;t have the time or expertise to manage their own investments.
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { AboutBanner, Footer } from '@/components'
 import { AboutBg } from '@/public'
 import { Divider } from 'antd'
+import { paragrahStyle } from '@/styles'
 
 const AboutUs = () => {
   const router = useRouter()
@@ -25,19 +26,19 @@ const AboutUs = () => {
           <div className='paragraph-container text-white'>
             <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>edge quant group</h3>
             <div className='px-4' id="about-introduction">
-              <p className='text-normal font-light'>
+              <p className={`${paragrahStyle} font-light`}>
                 EDGE via its alliances offers you a broad range of trading opportunities whether you’re an experienced trader, or just getting started. EDGE is 100 percent Australian owned and managed by the principal owners which means we are committed to offering you the best service and servicing your trading needs. Our mission is to provide investment solutions for serious investors who value personal service.
               </p>
               <Divider className='bg-white m-0 my-4' />
-              <p className='text-normal font-light'>
+              <p className={`${paragrahStyle} font-light`}>
                 Our clients vary by age, they include individuals, corporate, high net worth individuals, overseas nationals and other major financial institutions. Our clients require various levels of advice and service from us, the balance of the partnership is what is important, and trust and integrity are paramount in the close working relationship between Alpha Securities and each client.
               </p>
               <Divider className='bg-white m-0 my-4' />
-              <p className='text-normal font-light'>
+              <p className={`${paragrahStyle} font-light`}>
                 We work with you the client to ensure that all are working towards the same financial goals. Quality, accuracy and dependability are &apos;must haves&apos; in the development of successful financial plans.
               </p>
               <Divider className='bg-white m-0 my-4' />
-              <p className='text-normal font-light'>
+              <p className={`${paragrahStyle} font-light`}>
                 At EDGE we are backed by a powerful network of support services, including active investment research resources, compliance, technology, on-going educational support, professional development and access to a broad range of investment products.
               </p>
             </div>

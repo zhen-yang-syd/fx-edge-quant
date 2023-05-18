@@ -4,8 +4,9 @@ import { Footer } from '@/components'
 import { AboutBg } from '@/public'
 import { BlockWrapper } from '@/components/Hoc'
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant } from '@/utils/motion'
+import { fadeIn } from '@/utils/motion'
 import { Divider } from 'antd'
+import { paragrahStyle } from '@/styles'
 
 const FinancialAdvice = () => {
   return (
@@ -33,7 +34,7 @@ const FinancialAdvice = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Financial advice</h3>
-            <div className='flex flex-col gap-4 text-gray-500 text-base px-4'>
+            <div className={`${paragrahStyle} flex flex-col gap-4 text-gray-500 text-base px-4`}>
               <p>General financial advice doesn&apos;t take into account your personal situation or goals, or how it might affect you personally.</p>
               <p>Personal financial advice helps to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance and super and retirement planning.</p>
             </div>
@@ -72,15 +73,15 @@ const FinancialAdvice = () => {
               <Divider className='m-0 bg-white' />
               <p className='text-lg text-white'>Personal advice can include:</p>
               <div className='w-full flex flex-row flex-wrap justify-between gap-4'>
-                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
+                <div className={`pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white ${paragrahStyle}`}>
                   <h4>Simple, single-issue advice </h4>
                   <p>Help with one financial issue. For example, how much to contribute to your super, or what to do if you inherit shares.</p>
                 </div>
-                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
+                <div className={`pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white ${paragrahStyle}`}>
                   <h4>Comprehensive financial advice</h4>
                   <p>Help to develop a financial plan to reach your financial goals. This covers things like savings, investments, insurance, superannuation and retirement planning.</p>
                 </div>
-                <div className='pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white'>
+                <div className={`pt-4 pb-8 px-4 max-w-[300px] rounded-sm bg-transparent button-shadow text-white ${paragrahStyle}`}>
                   <h4>Ongoing advice </h4>
                   <p>Regular monitoring and review of your financial plan and personal circumstances.</p>
                 </div>
@@ -89,13 +90,13 @@ const FinancialAdvice = () => {
             </div>
           </div>
         </div>
-        {/* <div className='w-full bg-gray-300'>
+        <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-gray-500 drop-shadow-lg'>
             <h3 className='text-black font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>When general advice might be appropriate</h3>
             <div className='w-full flex flex-row flex-wrap justify-center gap-10'>
               <div className='max-w-[300px] flex flex-col gap-10'>
                 <h5 className='text-lg text-gray-600 text-center'>You may want general advice if you:</h5>
-                <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
+                <ul className={`${paragrahStyle} list-disc ml-5 flex flex-col gap-2 capitalize`}>
                   <li>want to compare or confirm your understanding of different financial products. For example, the difference between a managed fund and an ETF</li>
                   <li>are researching and learning about different financial topics</li>
                   <li>don&apos;t want to spend money on tailored advice</li>
@@ -104,7 +105,7 @@ const FinancialAdvice = () => {
               <Divider type='vertical' className='bg-white h-[200px] lg:block hidden' />
               <div className='max-w-[300px] flex flex-col gap-10'>
                 <h5 className='text-lg text-gray-600 text-center'>You may be receiving general advice if you:</h5>
-                <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
+                <ul className={`${paragrahStyle} list-disc ml-5 flex flex-col gap-2 capitalize`}>
                   <li>were not asked questions about your financial situation, needs and objectives</li>
                   <li>are dealing with someone who will not recommend a specific product for you. They will speak generally about it rather than tailoring it to you</li>
                 </ul>
@@ -112,7 +113,7 @@ const FinancialAdvice = () => {
               <Divider type='vertical' className='bg-white h-[200px] lg:block hidden' />
               <div className='max-w-[300px] flex flex-col gap-10'>
                 <h5 className='text-lg text-gray-600 text-center'>When providing general advice, the advice provider must give you a warning. The provider will:</h5>
-                <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
+                <ul className={`${paragrahStyle} list-disc ml-5 flex flex-col gap-2 capitalize`}>
                   <li>tell you the advice you’re about to receive is general, meaning it doesn’t take into account your own objectives, financial situation or needs</li>
                   <li>prompt you to consider if the advice is appropriate for you before acting on it</li>
                   <li>in some cases, provide you with a Product Disclosure Statement if the advice is about a financial product</li>
@@ -120,14 +121,14 @@ const FinancialAdvice = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize sm:leading-none leading-[55px]'>When personal advice might be appropriate</h3>
             <div className='flex flex-row text-gray-500 flex-wrap justify-center gap-20'>
               {/* right section */}
               <div className='max-w-[300px]'>
-                <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
+                <ul className={`list-disc ml-5 flex flex-col gap-2 capitalize ${paragrahStyle}`}>
                   <li>Your situation is complex and you need help to work it all out</li>
                   <li>You&apos;re going through a significant life event. For example, buying a house, getting married, transitioning to retirement, redundancy, death of a spouse, or illness.</li>
                   <li>You inherited a large sum of money.</li>
@@ -136,7 +137,7 @@ const FinancialAdvice = () => {
               </div>
               {/* left section */}
               <div className='max-w-[300px]'>
-                <ul className='list-disc ml-5 flex flex-col gap-2 capitalize text-base'>
+                <ul className={`list-disc ml-5 flex flex-col gap-2 capitalize ${paragrahStyle}`}>
                   <li>You need specific advice on a topic area and have specific requirements. For example, you want income protection insurance but have health issues.</li>
                   <li>You want to ensure you&apos;re on track to meet your financial goals.</li>
                   <li>You need help managing someone else&apos;s money. For example, you’re appointed Power of Attorney for someone, or you’re an executor for a deceased estate.</li>

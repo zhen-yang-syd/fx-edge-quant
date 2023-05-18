@@ -6,7 +6,7 @@ import { AboutBg } from '@/public'
 import { BlockWrapper } from '@/components/Hoc'
 import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '@/utils/motion'
-import Link from 'next/link'
+import { paragrahStyle } from '@/styles'
 
 const SustainableInvestment = () => {
   return (
@@ -33,7 +33,7 @@ const SustainableInvestment = () => {
         <div className='w-full bg-white'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Sustainable investment</h3>
-            <div className='flex flex-col gap-4 text-gray-500 capitalize px-4'>
+            <div className={`flex flex-col gap-4 text-gray-500 capitalize px-4 ${paragrahStyle}`}>
               <p>Sustainable Investing is the practice of using ESG </p>
               <p>— environmental, social and governance</p>
               <p>— objectives, themes, and related considerations as a key driver for selecting investments.</p>
@@ -44,7 +44,7 @@ const SustainableInvestment = () => {
         <div className='w-full bg-gray-300'>
           <div className='paragraph-container text-black drop-shadow-lg'>
             <h3 className='font-semibold text-3xl underline decoration-white decoration-[1px] decoration-offline underline-offset-[20px] capitalize text-center'>What is ESG?</h3>
-            <p className='text-gray-500 text-center px-4'>ESG refers to specific considerations that can be used as part of investment decision-making:</p>
+            <p className={`text-gray-500 text-center px-4 text-base`}>ESG refers to specific considerations that can be used as part of investment decision-making:</p>
             <div className='flex flex-row flex-wrap gap-10 justify-center text-gray-500'>
               <div className='button-shadow flex flex-col gap-2 pt-4 pb-8 px-4 rounded-sm max-w-[300px] cursor-pointer'>
                 <h4 className='text-lg'>Environmental (E)</h4>
