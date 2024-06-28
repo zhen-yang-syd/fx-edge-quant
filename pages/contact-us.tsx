@@ -54,8 +54,8 @@ const ContactUs = () => {
   return (
     <>
       <Head>
-        <title>EDGE QUANT FUND MANAGEMENT</title>
-        <meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+        <title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
+        <meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/edge-icon.png" />
       </Head>
@@ -80,7 +80,7 @@ const ContactUs = () => {
               <div className='w-[600px] flex flex-col gap-5'>
                 <div className='flex flex-col gap-2 items-center cursor-pointer'>
                   <div className='flex items-center gap-3 text-lg font-bold'><EnvironmentOutlined />Our Office</div>
-                  <div className='text-base' id="address" onClick={() => copyToClipboard('address')}>201 Elizabeth Street Sydney 2000</div>
+                  <div className='text-base' id="address" onClick={() => copyToClipboard('address')}>97, Suite 4 Level 14/99 Bathurst St, Sydney NSW 2000</div>
                 </div>
                 <div className='flex flex-col gap-2 items-center cursor-pointer'>
                   <div className='flex items-center gap-3 text-lg font-bold'><MailOutlined />Official Email</div>

@@ -11,8 +11,8 @@ const Services = () => {
   return (
     <>
       <Head>
-				<title>Midasmarket QUANT FUND MANAGEMENT</title>
-				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+				<title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
+				<meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/edge-icon.png"  />
 			</Head>
@@ -24,7 +24,7 @@ const Services = () => {
         </div>
         <div className='w-full bg-[#373737]'>
           <div className='paragraph-container text-white'>
-            <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>edge quant services</h3>
+            <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Midas Market services</h3>
             <div className='flex flex-row flex-wrap justify-center gap-20'>
               <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/mda-services')}>
                 <div className='text-center capitalize text-lg font-semibold'>M.D.A Services</div>

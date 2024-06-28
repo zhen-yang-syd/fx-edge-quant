@@ -12,8 +12,8 @@ const SustainableInvestment = () => {
   return (
     <>
       <Head>
-				<title>EDGE QUANT FUND MANAGEMENT</title>
-				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+				<title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
+				<meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/edge-icon.png"  />
 			</Head>

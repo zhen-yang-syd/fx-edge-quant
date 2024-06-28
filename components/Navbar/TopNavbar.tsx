@@ -40,8 +40,8 @@ const TopNavbar = () => {
         <div className='flex flex-row gap-5 items-center cursor-pointer' onClick={() => { router.push('/'), setOpen(false) }}>
           <img src={Logo.src} alt="" className='w-auto h-[50px]' />
           <div className='flex flex-col text-white'>
-            <span className='font-bold text-xl'>EDGE</span>
-            <span className='text-sm'>QUANT</span>
+            <span className='font-bold text-xl'>Midas Markets</span>
+            {/* <span className='text-sm'>QUANT</span> */}
           </div>
           <Divider type='vertical' className='h-[40px]' />
         </div>

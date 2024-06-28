@@ -12,7 +12,7 @@ export default async function handler(
     if (!EMAIL_TOKEN_SECRET_KEY) return res.status(200).json({ status: 200, message: "Error sending email", data: { sent: "No email token secret key" } });
     sgMail.setApiKey(EMAIL_TOKEN_SECRET_KEY)
     const msg = {
-      from: 'info@edgecademy.org', // Change to your recipient
+      from: 'info@midasmarkets.group', // Change to your recipient
       to: 'info@edgequant.com.au', // Change to your verified sender
       subject: `EdgeQuant - ${title} - ${email}`,
       text: `${content}`,
