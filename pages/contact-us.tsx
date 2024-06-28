@@ -57,7 +57,7 @@ const ContactUs = () => {
         <title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
         <meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/edge-icon.png" />
+        <link rel="icon" href="/midasmarket-icon.png" />
       </Head>
       <main className='w-full relative'>
         <div className='w-full h-[50vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
@@ -84,7 +84,7 @@ const ContactUs = () => {
                 </div>
                 <div className='flex flex-col gap-2 items-center cursor-pointer'>
                   <div className='flex items-center gap-3 text-lg font-bold'><MailOutlined />Official Email</div>
-                  <div className='text-base' id="email" onClick={() => copyToClipboard('email')}>info@edgequant.com.au</div>
+                  <div className='text-base' id="email" onClick={() => copyToClipboard('email')}>Info@midasmarkets.group</div>
                 </div>
                 <Divider className='m-0 my-4' />
                 {/* Form section */}

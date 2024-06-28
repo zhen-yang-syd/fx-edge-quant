@@ -14,7 +14,7 @@ export default async function handler(
     const msg = {
       from: 'info@midasmarkets.group', // Change to your recipient
       to: 'info@edgequant.com.au', // Change to your verified sender
-      subject: `EdgeQuant - ${title} - ${email}`,
+      subject: `Midas Markets Investment Manager Ltd - ${title} - ${email}`,
       text: `${content}`,
       html: `<h3>From - ${email}</h3>
       <h5>Phone - ${phone}</h5>
