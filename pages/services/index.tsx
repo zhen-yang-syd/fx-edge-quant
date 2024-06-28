@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <>
       <Head>
-				<title>EDGE QUANT FUND MANAGEMENT</title>
+				<title>Midasmarket QUANT FUND MANAGEMENT</title>
 				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/edge-icon.png"  />
