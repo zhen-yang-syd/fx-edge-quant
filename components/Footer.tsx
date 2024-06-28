@@ -12,8 +12,8 @@ const Footer = () => {
       <div className="w-full text-white bg-[#373737] cursor-default">
         <div className="footer-container">
           {/* icon */}
-          <div className="flex flex-row gap-5 items-center">
-            <img src={Logo.src} alt="" className="w-auto h-[50px]" />
+          <div className="flex flex-row gap-1 items-center">
+            <img src={Logo.src} alt="" className="w-[200px]" />
             <div className="flex flex-col text-white">
               <span className="font-bold text-xl">
                 Midas Markets Investment Manager Ltd
