@@ -13,13 +13,7 @@ const Footer = () => {
         <div className="footer-container">
           {/* icon */}
           <div className="flex flex-row gap-1 items-center">
-            <img src={Logo.src} alt="" className="w-[200px] scale-[150%]" />
-            <div className="flex flex-col text-white">
-              <span className="font-bold text-xl">
-                Midas Markets Investment Manager Ltd
-              </span>
-              {/* <span className="text-sm">QUANT</span> */}
-            </div>
+            <img src={Logo.src} alt="" className="w-[200px]" />
           </div>
           {/* nav bar */}
           <div className="flex flex-col gap-5 items-left">
