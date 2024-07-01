@@ -48,7 +48,7 @@ const TopNavbar = () => {
             router.push("/"), setOpen(false);
           }}
         >
-          <img src={Logo.src} alt="" className=" h-[100px]" />
+          <img src={Logo.src} alt="" className="h-[100px] scale-[200%]" />
         </div>
         <div className="sm:flex flex-row gap-5 items-center hidden">
           {navItem.map((item, index) => (
