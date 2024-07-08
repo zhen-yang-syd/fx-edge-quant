@@ -68,34 +68,30 @@ export default function Home() {
               Trading and Financial Services
             </span>
           </h2>
-          <p className="text-lg font-light flex flex-row flex-wrap justify-center lg:gap-20 sm:gap-10 gap-0">
+          <p className="text-lg font-light flex flex-row flex-wrap justify-center lg:gap-12 sm:gap-10 gap-0">
             <span
-              className={`w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 leading-[23px] ${paragrahStyle}`}
+              className={`w-[350px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-start justify-start gap-4 leading-[23px] ${paragrahStyle}`}
             >
-              <FundTwoTone className="text-5xl" />
-              Midas Markets Investment Manager Ltd is an exciting boutique
-              Financial Services Securities firm with strategic alliances across
-              all facets of the financial markets providing clients with a
-              unique offering to suit their own requirements, whether online
-              traders, wealth creators or one off trades.
+              <span className="text-black font-semibold">{`Broaden your potential`}</span>
+              <span>
+                {`Our scale and breadth of investment expertise allow us to combine a range of specialist and mainstream asset classes. This expands your clients sources of potential return. And by also carefully assessing future risks, our multi-asset strategies aim to give your clients a smoother long-term investment performance.`}
+              </span>
             </span>
             <span
-              className={`w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 leading-[23px] ${paragrahStyle}`}
+              className={`w-[350px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-start justify-start gap-4 leading-[23px] ${paragrahStyle}`}
             >
-              <DollarTwoTone className="text-5xl" twoToneColor="#eb2f96" />
-              Midas Markets Investment Manager Ltd is complimented with a team
-              of young and old to provide the best personal customer service to
-              all clients and their financial needs. With a long and
-              distinguished presence in the global Market, we bring a depth of
-              knowledge and expertise across a variety of financial areas.
+              <span className="text-black font-semibold">{`Target your outcome`}</span>
+              <span>
+                {`Many of our multi-asset strategies are designed to target specific goals and risk-reward requirements – from tactical asset allocation to diversified income/growth to absolute ‘cash-plus’ return strategies. Strategies can be further customised to meet your clients needs.`}
+              </span>
             </span>
             <span
-              className={`w-[300px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-center justify-start gap-4 leading-[23px] ${paragrahStyle}`}
+              className={`w-[350px] mb-5 drop-shadow-lg shadow-lg pt-4 pb-10 px-8 text-[#111111] bg-gray-200 flex flex-col items-start justify-start gap-4 leading-[23px] ${paragrahStyle}`}
             >
-              <CrownTwoTone className="text-5xl" twoToneColor="#52c41a" />
-              Midas Markets Investment Manager Ltd’s strengths are working with
-              our clients to deliver the best possible service and create
-              financial stability.
+              <span className="text-black font-semibold">{`Focus on sustainability`}</span>
+              <span>
+                {`We want our multi-asset strategies to contribute to the long-term health of society and our planet. So we assess environmental, social and governance (ESG) factors when we invest and take climate into account in our strategic asset allocation. You can also choose from specialist sustainable strategies.`}
+              </span>
             </span>
           </p>
         </div>
@@ -108,10 +104,7 @@ export default function Home() {
               <h4 className="font-normal text-xl">MISSION</h4>
               <Divider className="bg-white m-0 my-4" />
               <p className={`${paragrahStyle} text-normal font-light`}>
-                We are committed to the highest standards of professionalism and
-                integrity. This is demonstrated through our ongoing professional
-                development of our team by understanding our clients, their
-                businesses and their interests.
+                {`We invest to help create more for our clients. We offer investment expertise across key asset classes, regions and markets so that our clients can capture investment potential. By combining market and economic insight with technology and diverse perspectives, we look for optimal ways to help our clients navigate the future and reach their objectives. And by integrating environmental, social and governance (ESG) considerations through our process, we seek to find the most sustainable investment opportunities globally helping build our conviction and underpin client solutions. By ensuring the assets we invest in are ready for and resilient to a world in transition, we act as guardians of our clients’ assets and where possible we align the interests of our clients and wider society with a more sustainable future for our planet.`}
               </p>
             </div>
             <div className="px-4" id="vision">
@@ -184,9 +177,7 @@ export default function Home() {
                 <Panel header="Diverse" key="4">
                   <Divider className="bg-white m-0 mb-5" />
                   <p className={`leading-[30px] text-white ${paragrahStyle}`}>
-                    Midas Markets Investment Manager Ltd offers a diverse range
-                    of financial products, including Equities, ETFs,
-                    Derivatives, CFDs, and International Trading.
+                    {`Midas Markets Investment Manager Ltd manages a diverse range of financial products, including Bonds, Real Estate Funds, Equities, ETFs, FOFs and Derivatives.`}
                   </p>
                 </Panel>
               </Collapse>

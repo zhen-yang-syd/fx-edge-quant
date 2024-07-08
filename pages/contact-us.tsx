@@ -168,9 +168,9 @@ const ContactUs = () => {
                           value={content}
                         />
                       </Form.Item>
-                      <div className='mx-auto'>
+                      {/* <div className='mx-auto'>
                         <VerifyComponent setPassVerification={setPassVerification} />
-                      </div>
+                      </div> */}
                       <Form.Item className='w-full flex justify-between flex-col items-center'>
                         <Button
                           htmlType="submit"
