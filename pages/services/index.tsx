@@ -11,10 +11,10 @@ const Services = () => {
   return (
     <>
       <Head>
-				<title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
-				<meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
+				<title>EDGE QUANT FUND MANAGEMENT</title>
+				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/edge-icon.png"  />
 			</Head>
       <main className='w-full relative'>
         <div className='w-full h-[80vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
@@ -24,11 +24,11 @@ const Services = () => {
         </div>
         <div className='w-full bg-[#373737]'>
           <div className='paragraph-container text-white'>
-            <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>Midas Market services</h3>
+            <h3 className='font-normal text-3xl underline decoration-gray-300 decoration-[1px] decoration-offline underline-offset-[20px] text-center capitalize'>edge quant services</h3>
             <div className='flex flex-row flex-wrap justify-center gap-20'>
               <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/mda-services')}>
-                <div className='text-center capitalize text-lg font-semibold'>Multi-Asset Funds</div>
-                <div className={`flex flex-col ${paragrahStyle}`}>{`Midas Markets' Multi-Asset Fund Solutions team designs and manages a suite of mutual funds and model portfolios that invest across asset classes, geographies and styles to seek to achieve their respective investment objectives.`}</div>
+                <div className='text-center capitalize text-lg font-semibold'>M.D.A Services</div>
+                <div className={`flex flex-col ${paragrahStyle}`}>Financial advisers often use MDAs to manage portfolios for their clients.</div>
               </div>
               <div className='flex flex-col gap-4 bg-transparent button-shadow pt-4 pb-8 px-5 rounded-lg drop-shadow-lg shadow-lg max-w-[300px] text-white cursor-pointer' onClick={()=>router.push('/services/financial-advice')}>
                 <div className='text-center capitalize text-lg font-semibold'>Financial Advice</div>

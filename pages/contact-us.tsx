@@ -54,10 +54,10 @@ const ContactUs = () => {
   return (
     <>
       <Head>
-        <title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
-        <meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
+        <title>EDGE QUANT FUND MANAGEMENT</title>
+        <meta name="description" content="EDGE QUANT FINICIAL TRADING" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/edge-icon.png" />
       </Head>
       <main className='w-full relative'>
         <div className='w-full h-[50vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
@@ -80,11 +80,11 @@ const ContactUs = () => {
               <div className='w-[600px] flex flex-col gap-5'>
                 <div className='flex flex-col gap-2 items-center cursor-pointer'>
                   <div className='flex items-center gap-3 text-lg font-bold'><EnvironmentOutlined />Our Office</div>
-                  <div className='text-base' id="address" onClick={() => copyToClipboard('address')}>97, Suite 4 Level 14/99 Bathurst St, Sydney NSW 2000</div>
+                  <div className='text-base' id="address" onClick={() => copyToClipboard('address')}>201 Elizabeth Street Sydney 2000</div>
                 </div>
                 <div className='flex flex-col gap-2 items-center cursor-pointer'>
                   <div className='flex items-center gap-3 text-lg font-bold'><MailOutlined />Official Email</div>
-                  <div className='text-base' id="email" onClick={() => copyToClipboard('email')}>Info@midasmarkets.group</div>
+                  <div className='text-base' id="email" onClick={() => copyToClipboard('email')}>info@edgequant.com.au</div>
                 </div>
                 <Divider className='m-0 my-4' />
                 {/* Form section */}
@@ -168,9 +168,9 @@ const ContactUs = () => {
                           value={content}
                         />
                       </Form.Item>
-                      {/* <div className='mx-auto'>
+                      <div className='mx-auto'>
                         <VerifyComponent setPassVerification={setPassVerification} />
-                      </div> */}
+                      </div>
                       <Form.Item className='w-full flex justify-between flex-col items-center'>
                         <Button
                           htmlType="submit"

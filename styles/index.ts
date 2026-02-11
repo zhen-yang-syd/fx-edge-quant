@@ -1,1 +1,1 @@
-export const paragrahStyle = `text-base break-words`;
+export const paragrahStyle = `text-justify text-base`

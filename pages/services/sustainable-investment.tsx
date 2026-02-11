@@ -12,10 +12,10 @@ const SustainableInvestment = () => {
   return (
     <>
       <Head>
-				<title>Midas Markets Investment Manager Ltd QUANT FUND MANAGEMENT</title>
-				<meta name="description" content="Midas Markets Investment Manager Ltd QUANT FINICIAL TRADING" />
+				<title>EDGE QUANT FUND MANAGEMENT</title>
+				<meta name="description" content="EDGE QUANT FINICIAL TRADING" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/edge-icon.png"  />
 			</Head>
       <main className='w-full relative'>
         <div className='w-full h-[80vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
