@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { HomeBg, HomeValue } from '@/public'
 import { HomeBanner, Footer } from '@/components'
-import { Collapse, Modal } from 'antd'
-import { WarningOutlined } from '@ant-design/icons'
+import { Collapse } from 'antd'
 import { paragrahStyle } from '@/styles'
 
 const { Panel } = Collapse;
 export default function Home() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [heroLoaded, setHeroLoaded] = useState(false);
 
 	useEffect(() => {
 		const hasSeenNotice = sessionStorage.getItem('hasSeenNotice');
@@ -16,6 +16,11 @@ export default function Home() {
 			setIsModalOpen(true);
 			sessionStorage.setItem('hasSeenNotice', 'true');
 		}
+	}, []);
+
+	useEffect(() => {
+		const t = setTimeout(() => setHeroLoaded(true), 100);
+		return () => clearTimeout(t);
 	}, []);
 
 	return (
@@ -28,7 +33,18 @@ export default function Home() {
 			</Head>
 			<main className='w-full relative'>
 				{/* ===== HERO ===== */}
-				<section className='w-full h-screen relative' style={{ backgroundImage: `url(${HomeBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+				<section className='w-full h-screen relative overflow-hidden'>
+					<div
+						className='absolute inset-0 will-change-transform'
+						style={{
+							backgroundImage: `url(${HomeBg.src})`,
+							backgroundRepeat: 'no-repeat',
+							backgroundSize: 'cover',
+							backgroundPosition: 'center',
+							transform: heroLoaded ? 'scale(1)' : 'scale(1.18)',
+							transition: 'transform 16s cubic-bezier(0.16, 1, 0.3, 1)',
+						}}
+					/>
 					<div className='absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 flex justify-center items-center text-white text-center'>
 						<HomeBanner />
 					</div>
@@ -144,47 +160,54 @@ export default function Home() {
 				<Footer />
 
 				{/* ===== NOTICE MODAL ===== */}
-				<Modal
-					open={isModalOpen}
-					onCancel={() => setIsModalOpen(false)}
-					centered
-					width={480}
-					footer={null}
-					closable={false}
-					maskClosable={false}
-					title={null}
-				>
-					<div className='flex flex-col items-center text-center px-2 pt-4 pb-2'>
-						<div className='w-14 h-14 rounded-full flex items-center justify-center mb-5'
-							style={{ background: 'rgba(239,68,68,0.08)' }}>
-							<WarningOutlined className='text-2xl text-red-500' />
+				{isModalOpen && (
+					<div className='fixed inset-0 z-[200] flex items-center justify-center px-5'
+						style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(6px)' }}>
+						<div className='w-full max-w-[440px] bg-white rounded-2xl overflow-hidden'
+							style={{ boxShadow: '0 25px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)' }}>
+
+							{/* Top accent bar */}
+							<div className='w-full h-1' style={{ background: '#0F172A' }} />
+
+							<div className='px-8 pt-8 pb-7 flex flex-col items-center text-center'>
+								{/* Eyebrow */}
+								<div className='flex items-center gap-2.5 mb-3'>
+									<div className='w-5 h-[1px] bg-gray-200' />
+									<span className='text-[10px] font-medium tracking-[0.25em] uppercase text-gray-400'>Notice</span>
+									<div className='w-5 h-[1px] bg-gray-200' />
+								</div>
+								<h3 className='text-2xl font-semibold text-gray-900 mb-6'>Important Notice</h3>
+
+								{/* Warning */}
+								<p className='text-[15px] text-gray-500 leading-relaxed mb-6'>
+									The website <strong className='text-gray-900'>www.edgeark.com</strong> is <strong className='text-gray-900'>not</strong> affiliated with our company in any way.
+								</p>
+
+								{/* Divider */}
+								<div className='w-10 h-[1px] bg-gray-200 mb-6' />
+
+								{/* Official site */}
+								<p className='text-xs text-gray-400 tracking-wide mb-1'>Our official website</p>
+								<a href='https://www.edgeark.com.au' target='_blank' rel='noopener noreferrer'
+									className='text-gray-900 font-semibold text-lg no-underline hover:text-gray-600 transition-colors duration-200 mb-8'>
+									www.edgeark.com.au
+								</a>
+
+								{/* CTA */}
+								<button
+									className='w-full py-3 rounded-lg text-sm font-semibold tracking-wide
+										text-white cursor-pointer border-none
+										transition-all duration-200 ease-in-out
+										hover:opacity-90'
+									style={{ background: '#0F172A' }}
+									onClick={() => setIsModalOpen(false)}
+								>
+									I Understand
+								</button>
+							</div>
 						</div>
-						<h3 className='text-lg font-semibold text-gray-900 mb-5'>Important Notice</h3>
-						<div className='w-full rounded-lg px-5 py-4 mb-4 text-left'
-							style={{ background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.12)' }}>
-							<p className='text-sm text-red-700/80 leading-relaxed'>
-								The website <strong className='text-red-700'>www.edgeark.com</strong> is <strong>NOT</strong> affiliated with our company in any way.
-							</p>
-						</div>
-						<div className='w-full rounded-lg px-5 py-4 mb-6 text-center'
-							style={{ background: 'rgba(15,23,42,0.03)', border: '1px solid rgba(15,23,42,0.08)' }}>
-							<p className='text-xs text-gray-400 mb-1'>Our official website is</p>
-							<a href='https://www.edgeark.com.au' target='_blank' rel='noopener noreferrer'
-								className='text-[#0F172A] font-semibold text-base hover:underline'>
-								www.edgeark.com.au
-							</a>
-						</div>
-						<button
-							className='w-full py-2.5 rounded-lg text-sm font-semibold text-white
-								transition-all duration-200 ease-in-out cursor-pointer border-none
-								hover:opacity-90'
-							style={{ background: '#0F172A' }}
-							onClick={() => setIsModalOpen(false)}
-						>
-							I Understand
-						</button>
 					</div>
-				</Modal>
+				)}
 			</main>
 		</>
 	)
