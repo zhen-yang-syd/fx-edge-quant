@@ -2,38 +2,22 @@ import React from 'react'
 import { BlockWrapper } from '../Hoc'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
-import { DownOutlined } from '@ant-design/icons'
-import { useRouter } from 'next/router'
 
 const ServicesBanner = () => {
-    const router = useRouter()
     return (
-        <div className='flex flex-col gap-6'>
-            <motion.div
-                variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
-                className="text-secondary lg:text-[90px] text-[40px] lg:leading-[100px] font-bold"
-            >
-                <span className='drop-shadow-xl text-white tracking-[1rem] capitalize'>
-                    .MDA Services
-                </span>
-            </motion.div>
-            <motion.div
-                variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}
-                className="text-secondary lg:text-[90px] text-[40px] lg:leading-[100px] font-bold"
-            >
-                <span className='drop-shadow-xl text-white tracking-[1rem] capitalize'>
-                    .financial advice
-                </span>
-            </motion.div>
-            <motion.div
-                variants={fadeIn("right", "spring", 3 * 0.5, 0.75)}
-                className="text-secondary lg:text-[90px] text-[40px] lg:leading-[100px] font-bold"
-            >
-                <span className='drop-shadow-xl text-white tracking-[1rem] capitalize'>
-                    .sustainable investment
-                </span>
-            </motion.div>
-        </div>
+        <motion.div
+            variants={fadeIn("top", "spring", 0.5, 0.75)}
+            className="flex flex-col items-center gap-4 pt-[8rem]"
+        >
+            <span className='text-sm font-medium tracking-[0.2em] uppercase text-white/40'>
+                What we offer
+            </span>
+            <h1 className='lg:text-[72px] sm:text-[52px] text-[34px] lg:leading-[1.15] leading-[1.2] font-bold text-white tracking-[0.12em]'
+                style={{ textShadow: '0 0 40px rgba(255,255,255,0.08)' }}>
+                Our Services
+            </h1>
+            <div className='w-16 h-[2px] bg-white/20 mt-2' />
+        </motion.div>
     )
 }
 

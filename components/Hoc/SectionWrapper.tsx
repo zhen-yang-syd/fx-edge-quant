@@ -9,7 +9,7 @@ const StarWrapper = (Component: any, idName: any) =>
 				initial='hidden'
 				whileInView='show'
 				viewport={{ once: true, amount: 0.25 }}
-				className={`mx-auto relative z-0`}
+				className='mx-auto relative z-0'
 			>
 				<span id={idName}>
 				</span>

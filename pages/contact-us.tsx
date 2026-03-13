@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 import { Footer } from '@/components'
 import { AboutBg } from '@/public'
 import { BlockWrapper } from '@/components/Hoc'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/utils/motion'
-import { Divider, message } from 'antd'
-import { FormOutlined, EnvironmentOutlined, MailOutlined } from '@ant-design/icons'
+import { message } from 'antd'
+import { EnvironmentOutlined, MailOutlined } from '@ant-design/icons'
 import dynamic from 'next/dynamic'
 const Map = dynamic(() => import('@/components/Map'), { ssr: false })
-const VerifyComponent = dynamic(() => import('@/components/VerifyComponent'), { ssr: false })
 import { Input, Form, Button } from 'antd'
 import axios from 'axios'
-import { BASE_URL } from '@/utils'
 
 const ContactUs = () => {
   const copyToClipboard = (elementId: string) => {
@@ -23,182 +21,192 @@ const ContactUs = () => {
       .then(() => {
         message.success(`Copied ${content} to clipboard.`);
       })
-      .catch((error) => {
+      .catch(() => {
         message.error('Failed to copy content to clipboard.');
       });
   }
-  const [title, setTitle] = useState<string>()
-  const [email, setEmail] = useState<string>()
-  const [content, setContent] = useState<string>()
-  const [phone, setPhone] = useState<string>()
 
-  const [passVerification, setPassVerification] = useState<boolean>(false)
-
+  const [loading, setLoading] = useState(false)
   const [form] = Form.useForm();
+
   const onFinish = async (values: any) => {
-    console.log(values)
+    setLoading(true)
     try {
-      const { data } = await axios.post(`/api/send-email`, values)
-      console.log(data)
+      await axios.post(`/api/send-email`, values)
+      message.success('Message sent successfully')
+      form.resetFields()
     }
     catch (err) {
-      console.log(err)
+      message.error('Failed to send message. Please try again.')
+    } finally {
+      setLoading(false)
     }
-    message.success('Message sent successfully')
+  }
 
+  const onFinishFailed = () => {
+    message.error('Please fill in all required fields')
   }
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-    message.error('Please fill all the fields')
-  }
+
   return (
     <>
       <Head>
-        <title>EDGE QUANT FUND MANAGEMENT</title>
-        <meta name="description" content="EDGE QUANT FINICIAL TRADING" />
+        <title>EDGE ARK FINANCIAL SERVICES</title>
+        <meta name="description" content="EDGE ARK FINANCIAL SERVICES" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/edge-icon.png" />
       </Head>
       <main className='w-full relative'>
-        <div className='w-full h-[50vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
-          <div className='absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-center items-center text-white text-center'>
+        {/* ===== HERO ===== */}
+        <section className='w-full h-[50vh] relative' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'top' }}>
+          <div className='absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 flex justify-center items-center text-white text-center'>
             <motion.div
-              variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
-              className="text-secondary lg:text-[90px] text-[40px] lg:leading-[100px] font-bold"
+              variants={fadeIn("top", "spring", 0.5, 0.75)}
+              className="flex flex-col items-center gap-4 pt-[8rem]"
             >
-              <span className='drop-shadow-xl text-white tracking-[1rem] capitalize'>
-                Contact us
+              <span className='text-sm font-medium tracking-[0.2em] uppercase text-white/40'>
+                Get in touch
               </span>
+              <h1 className='lg:text-[72px] sm:text-[52px] text-[34px] lg:leading-[1.15] leading-[1.2] font-bold text-white tracking-[0.12em]'
+                style={{ textShadow: '0 0 40px rgba(255,255,255,0.08)' }}>
+                Contact Us
+              </h1>
+              <div className='w-16 h-[2px] bg-white/20 mt-2' />
             </motion.div>
           </div>
-        </div>
-        <div className='w-full bg-white'>
-          <div className='paragraph-container drop-shadow-lg'>
-            <div className='w-full flex flex-row flex-wrap justify-center gap-10 px-4'>
-              {/* map */}
+        </section>
+
+        {/* ===== CONTACT CONTENT ===== */}
+        <section className='w-full bg-white'>
+          <div className='paragraph-container'>
+            <div className='flex flex-col gap-3 items-center text-center'>
+              <span className='text-sm font-medium tracking-[0.2em] uppercase text-gray-400'>Reach out</span>
+              <h3 className='text-3xl sm:text-4xl font-semibold text-gray-900'>We&apos;d Love to Hear From You</h3>
+              <div className='w-16 h-[2px] bg-gray-300 mt-2' />
+            </div>
+            <div className='w-full flex flex-row flex-wrap justify-center gap-10'>
+              {/* Map */}
               <Map />
-              <div className='w-[600px] flex flex-col gap-5'>
-                <div className='flex flex-col gap-2 items-center cursor-pointer'>
-                  <div className='flex items-center gap-3 text-lg font-bold'><EnvironmentOutlined />Our Office</div>
-                  <div className='text-base' id="address" onClick={() => copyToClipboard('address')}>201 Elizabeth Street Sydney 2000</div>
+              <div className='w-full max-w-[600px] flex flex-col gap-5'>
+                {/* Contact Info */}
+                <div className='flex flex-col gap-4'>
+                  <button
+                    className='flex flex-row items-start gap-4 cursor-pointer bg-transparent border-none p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 min-h-[44px] text-left'
+                    onClick={() => copyToClipboard('address')}
+                    aria-label="Copy office address to clipboard"
+                  >
+                    <div className='w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'
+                      style={{ background: '#0F172A' }}>
+                      <EnvironmentOutlined className='text-white text-base' />
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                      <span className='text-sm font-medium text-gray-400 uppercase tracking-wider'>Our Office</span>
+                      <span className='text-base text-gray-700' id="address">1404/99 Bathurst Street, Sydney, NSW 2000</span>
+                    </div>
+                  </button>
+                  <button
+                    className='flex flex-row items-start gap-4 cursor-pointer bg-transparent border-none p-4 rounded-xl hover:bg-gray-50 transition-colors duration-200 min-h-[44px] text-left'
+                    onClick={() => copyToClipboard('email')}
+                    aria-label="Copy email address to clipboard"
+                  >
+                    <div className='w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0'
+                      style={{ background: '#0F172A' }}>
+                      <MailOutlined className='text-white text-base' />
+                    </div>
+                    <div className='flex flex-col gap-1'>
+                      <span className='text-sm font-medium text-gray-400 uppercase tracking-wider'>Official Email</span>
+                      <span className='text-base text-gray-700' id="email">info@edgeark.com.au</span>
+                    </div>
+                  </button>
                 </div>
-                <div className='flex flex-col gap-2 items-center cursor-pointer'>
-                  <div className='flex items-center gap-3 text-lg font-bold'><MailOutlined />Official Email</div>
-                  <div className='text-base' id="email" onClick={() => copyToClipboard('email')}>info@edgequant.com.au</div>
-                </div>
-                <Divider className='m-0 my-4' />
-                {/* Form section */}
-                <div className='w-full flex flex-col items-center'>
-                  <h5 className='text-lg capitalize font-bold flex items-center gap-3'><FormOutlined />Leave us a message</h5>
-                  <div className='w-full px-4 py-4'>
-                    <Form
-                      name="send-message"
-                      initialValues={{ remember: true }}
-                      onFinish={onFinish}
-                      onFinishFailed={onFinishFailed}
-                      form={form}
-                      className="lg:min-w-[500px] flex flex-col gap-4 min-w-[350px]"
+
+                <div className='w-full h-[1px] bg-gray-200 my-2' />
+
+                {/* Form */}
+                <div className='w-full flex flex-col gap-4'>
+                  <h5 className='text-lg font-semibold text-gray-900'>Leave Us a Message</h5>
+                  <Form
+                    name="send-message"
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    form={form}
+                    layout="vertical"
+                    className="w-full flex flex-col gap-2"
+                  >
+                    <Form.Item
+                      name="title"
+                      label="Subject"
+                      rules={[{ required: true, message: 'Please input a subject' }]}
                     >
-                      <Form.Item
-                        name="title"
-                        rules={[{ required: true, message: 'Please input your title!' }]}
+                      <Input placeholder="e.g. General Inquiry" size='large' />
+                    </Form.Item>
+                    <Form.Item
+                      name="phone"
+                      label="Phone (optional)"
+                    >
+                      <Input placeholder="e.g. +61 400 000 000" size='large' />
+                    </Form.Item>
+                    <Form.Item
+                      name="email"
+                      label="Email"
+                      rules={[
+                        { required: true, message: 'Please input your email' },
+                        { type: 'email', message: 'Please input a valid email' }
+                      ]}
+                    >
+                      <Input placeholder="e.g. john@example.com" size='large' />
+                    </Form.Item>
+                    <Form.Item
+                      name="content"
+                      label="Message"
+                      rules={[{ required: true, message: 'Please input your message' }]}
+                    >
+                      <Input.TextArea
+                        autoSize={{ minRows: 6, maxRows: 10 }}
+                        maxLength={500}
+                        showCount
+                        placeholder="Write your message here..."
+                        size='large'
+                      />
+                    </Form.Item>
+                    <Form.Item className='w-full flex justify-center'>
+                      <Button
+                        htmlType="submit"
+                        loading={loading}
+                        className="transition-all duration-200 ease-in-out
+                        cursor-pointer text-base flex justify-center items-center
+                        border-none rounded-lg
+                        text-white px-10 py-5 font-medium tracking-wide
+                        hover:opacity-90"
+                        style={{ background: '#0F172A' }}
                       >
-                        <Input
-                          placeholder="Title"
-                          size='large'
-                          onChange={
-                            (e: React.ChangeEvent<HTMLInputElement>) => { setTitle(e.target.value) }
-                          }
-                          value={title}
-                        />
-                      </Form.Item>
-                      <Form.Item
-                        name="phone"
-                      >
-                        <Input
-                          placeholder="Phone"
-                          size='large'
-                          onChange={
-                            (e: React.ChangeEvent<HTMLInputElement>) => { setPhone(e.target.value) }
-                          }
-                          value={phone}
-                        />
-                      </Form.Item>
-                      <Form.Item
-                        name="email"
-                        rules={[
-                          { required: true, message: 'Please input your title!' },
-                          {
-                            validator(rule, value, callback) {
-                              if (value) {
-                                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-                                if (emailRegex.test(value)) {
-                                  callback();
-                                } else {
-                                  callback('Please input a valid email format!');
-                                }
-                              } else {
-                                callback();
-                              }
-                            }
-                          }
-                        ]}
-                      >
-                        <Input
-                          placeholder="Email"
-                          size='large'
-                          onChange={
-                            (e: React.ChangeEvent<HTMLInputElement>) => { setEmail(e.target.value) }
-                          }
-                          value={email}
-                        />
-                      </Form.Item>
-                      <Form.Item
-                        name="content"
-                        rules={[{ required: true, message: 'Please input your message!' }]}
-                      >
-                        <Input.TextArea
-                          autoSize={{ minRows: 6, maxRows: 10 }}
-                          maxLength={500}
-                          placeholder="Write your message here"
-                          size='large'
-                          onChange={
-                            (e) => { setContent(e.target.value) }
-                          }
-                          value={content}
-                        />
-                      </Form.Item>
-                      <div className='mx-auto'>
-                        <VerifyComponent setPassVerification={setPassVerification} />
-                      </div>
-                      <Form.Item className='w-full flex justify-between flex-col items-center'>
-                        <Button
-                          htmlType="submit"
-                          className="transition duration-300 ease-in-out 
-                          cursor-pointer text-lg flex justify-center items-center
-                          border-white border-[1px]
-                          bg-blue-400 text-white hover:bg-white px-10 py-5
-                          "
-                          disabled={!passVerification}
-                        >
-                          SEND
-                        </Button>
-                      </Form.Item>
-                    </Form>
-                  </div>
+                        {loading ? 'SENDING...' : 'SEND MESSAGE'}
+                      </Button>
+                    </Form.Item>
+                  </Form>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className='w-full relative cursor-default text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <div className='footer-container'>
-            <div className='w-full flex flex-row justify-center gap-10'>
-              <span className='capitalize sm:text-3xl text-sm flex items-center'>get your free initial consultation</span>
-              <button className='border-[1px] border-white rounded-sm button-shadow flex items-center justify-center px-4 py-2'>Contact Us</button>
+        </section>
+
+        {/* ===== CTA ===== */}
+        <section className='w-full relative text-white' style={{ backgroundImage: `url(${AboutBg.src})`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className='absolute inset-0 bg-black/50' />
+          <div className='footer-container relative'>
+            <div className='w-full flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10'>
+              <h3 className='sm:text-3xl text-xl font-semibold tracking-wide text-center'>
+                Get Your Free Initial Consultation
+              </h3>
+              <button
+                className='border border-white/30 rounded-lg button-shadow flex items-center justify-center px-8 py-3 cursor-pointer hover:bg-white hover:text-gray-900 transition-all duration-200 min-h-[44px] text-white font-medium tracking-wide bg-transparent'
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+                Back to Top
+              </button>
             </div>
           </div>
-        </div>
+        </section>
+
         <Footer />
       </main>
     </>

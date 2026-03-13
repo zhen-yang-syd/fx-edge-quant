@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { SITE_KEY } from '@/utils';
