@@ -180,7 +180,7 @@ export default function Home() {
 
 								{/* Warning */}
 								<p className='text-[15px] text-gray-500 leading-relaxed mb-6'>
-									The website <strong className='text-gray-900'>www.edgeark.com</strong> is <strong className='text-gray-900'>not</strong> affiliated with our company in any way.
+									The website <strong className='text-gray-900'>edge-ark.com</strong> is <strong className='text-gray-900'>not</strong> affiliated with our company in any way.
 								</p>
 
 								{/* Divider */}
