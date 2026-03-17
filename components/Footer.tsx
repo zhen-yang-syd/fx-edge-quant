@@ -39,6 +39,10 @@ const Footer = () => {
                                 className='text-white/60 text-sm hover:text-white transition-colors duration-200 no-underline'>
                                 Privacy Policy
                             </Link>
+                            <a href='/fsg.pdf' target='_blank' rel='noopener noreferrer'
+                                className='text-white/60 text-sm hover:text-white transition-colors duration-200 no-underline'>
+                                Financial Services Guide
+                            </a>
                         </nav>
                     </div>
 
@@ -83,10 +87,17 @@ const Footer = () => {
                     <span className='text-xs text-white/30'>
                         &copy; 2026 Edge Ark Pty Ltd. AFSL No: 564271. All rights reserved.
                     </span>
-                    <Link href='/disclaimer'
-                        className='text-xs text-white/30 hover:text-white/60 transition-colors duration-200 no-underline'>
-                        Privacy Policy &middot; Disclaimer
-                    </Link>
+                    <div className='flex items-center gap-3'>
+                        <Link href='/disclaimer'
+                            className='text-xs text-white/30 hover:text-white/60 transition-colors duration-200 no-underline'>
+                            Privacy Policy &middot; Disclaimer
+                        </Link>
+                        <span className='text-white/15'>|</span>
+                        <a href='/fsg.pdf' target='_blank' rel='noopener noreferrer'
+                            className='text-xs text-white/30 hover:text-white/60 transition-colors duration-200 no-underline'>
+                            FSG
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

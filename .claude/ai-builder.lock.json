@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "artifacts": {
+    "skill:nextlevelbuilder/ui-ux-pro-max": {
+      "type": "skill",
+      "slug": "ui-ux-pro-max",
+      "author": "nextlevelbuilder",
+      "name": "ui-ux-pro-max",
+      "installedAt": "2026-03-13T02:01:56.132Z",
+      "files": [
+        ".claude/skills/ui-ux-pro-max/SKILL.md",
+        ".claude/skills/ui-ux-pro-max/README.md"
+      ]
+    }
+  }
+}
