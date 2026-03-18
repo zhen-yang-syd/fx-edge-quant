@@ -64,12 +64,12 @@ export default function Home() {
 							{[
 								{
 									title: 'Strategic Alliances',
-									text: 'EDGE is an exciting boutique Financial Services Firm with strategic alliances across all facets of the financial markets providing clients with a unique offering to suit their own requirements, whether online traders, wealth creators or one off trades.',
+									text: 'EDGE is an exciting boutique Financial Services Firm with strategic alliances across all facets of the financial markets providing clients with a unique offering of financial education and information.',
 									accent: '#0F172A',
 								},
 								{
 									title: 'Expert Team',
-									text: 'EDGE is complimented with a team of young and old to provide the best personal customer service to all clients and their financial needs. With a long and distinguished presence in the global Market, we bring a depth of knowledge and expertise across a variety of financial areas.',
+									text: 'EDGE employs a team of new and seasoned financial professionals to provide the best personal customer service to all clients and their financial needs. With a long and distinguished presence in the global Market, we bring a depth of knowledge and expertise across a variety of financial areas.',
 									accent: '#1E293B',
 								},
 								{
@@ -118,7 +118,7 @@ export default function Home() {
 								<h4 className='font-medium text-lg text-white/90 tracking-wide mb-3'>VISION</h4>
 								<div className='w-full h-[1px] bg-white/10 mb-4' />
 								<p className={`${paragrahStyle} text-white/60 font-light`}>
-									To be the chosen one-stop platform for investment education and investment information in Australia with a reputation for personalized service based on knowledge and experience and in partnership with our esteemed clients to achieve superior performance, results, and long-term profitability.
+									To be the chosen one-stop platform for investment education and information services in Australia with a reputation for excellent service based on knowledge and experience and in partnership with our esteemed clients to achieve superior performance, results, and long-term profitability.
 								</p>
 							</div>
 						</div>

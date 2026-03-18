@@ -44,7 +44,7 @@ const HomeBanner = () => {
                 variants={fadeIn("up", "spring", 0.7, 0.75)}
                 className="text-white/50 text-base sm:text-lg font-light max-w-[520px] text-center leading-relaxed"
             >
-                Boutique financial services with a personal touch.
+                Boutique financial services with a professional touch.
                 <br className='hidden sm:block' />
                 Strategic alliances across all facets of the financial markets.
             </motion.p>

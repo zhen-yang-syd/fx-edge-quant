@@ -81,6 +81,16 @@ const Footer = () => {
                 </div>
             </div>
 
+            {/* General Advice Warning */}
+            <div className='w-full border-t border-white/[0.06]'>
+                <div className='max-w-[1200px] mx-auto px-6 py-6 text-center'>
+                    <h5 className='text-xs font-semibold tracking-[0.15em] uppercase text-white/40 mb-2'>General Advice Warning</h5>
+                    <p className='text-xs text-white/30 leading-relaxed max-w-4xl mx-auto'>
+                        Edge Ark Pty Ltd (AFSL 564271) provides general financial product advice only. Any advice provided on this website does not take into account your individual objectives, financial situation, or needs. Before acting on any advice, you should consider whether it is appropriate to your circumstances and, if necessary, seek independent professional advice. Edge Ark Pty Ltd does not provide personal financial product advice.
+                    </p>
+                </div>
+            </div>
+
             {/* Bottom Bar */}
             <div className='w-full' style={{ background: 'rgba(0,0,0,0.2)' }}>
                 <div className='max-w-[1200px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3'>

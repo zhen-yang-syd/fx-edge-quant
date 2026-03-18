@@ -36,7 +36,7 @@ const AboutUs = () => {
               </p>
               <div className='w-full h-[1px] bg-white/10 my-6' />
               <p className={`${paragrahStyle} text-white/60 font-light`}>
-                Our clients vary by age, they include individuals, corporate, high net worth individuals, overseas nationals and other major financial institutions. Our clients require various levels of advice and service from us, the balance of the partnership is what is important, and trust and integrity are paramount in the close working relationship between Edge Ark and each client.
+                Our clients vary by age, they include individuals, corporate, high net worth individuals, overseas nationals and other major financial institutions. Our clients require a high level of service from us, the balance of the partnership is what is important, and trust and integrity are paramount in the close working relationship between Edge Ark and each client.
               </p>
               <div className='w-full h-[1px] bg-white/10 my-6' />
               <p className={`${paragrahStyle} text-white/60 font-light`}>
