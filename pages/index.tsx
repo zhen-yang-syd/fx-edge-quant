@@ -69,7 +69,7 @@ export default function Home() {
 								},
 								{
 									title: 'Expert Team',
-									text: 'EDGE employs a team of new and seasoned financial professionals to provide the best personal customer service to all clients and their financial needs. With a long and distinguished presence in the global Market, we bring a depth of knowledge and expertise across a variety of financial areas.',
+									text: 'EDGE employs a team of new and seasoned financial professionals to provide the best customer service to all clients and their financial needs. With a long and distinguished presence in the global Market, we bring a depth of knowledge and expertise across a variety of financial areas.',
 									accent: '#1E293B',
 								},
 								{
